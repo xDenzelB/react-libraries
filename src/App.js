@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import DataGrid from 'react-data-grid';
 import './App.css';
+import Data from './data';
+import { generateColumns } from './data-utils';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DataGrid
+        columns={generateColumns(Data)} 
+        rows={Data} 
+      />
     </div>
   );
 }
