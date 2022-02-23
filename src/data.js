@@ -78,7 +78,7 @@ export default
   'company name ': 'Gigazoom',
   'car_make': 'GMC',
   'car_year': 2000,
-  'year_born': '2002. 1996'
+  'year_born': '1996'
 }, {
   'id': 9,
   'first_name': 'Harley',
@@ -158,7 +158,7 @@ export default
   'company name ': 'Topicstorm',
   'car_make': 'Pontiac',
   'car_year': 1986,
-  'year_born': '2002. 1996'
+  'year_born': '1996'
 }, {
   'id': 17,
   'first_name': 'Ichabod',
@@ -168,7 +168,7 @@ export default
   'company name ': 'Skynoodle',
   'car_make': 'Audi',
   'car_year': 2006,
-  'year_born': '2002. 1996'
+  'year_born': '1996'
 }, {
   'id': 18,
   'first_name': 'Fredericka',
@@ -268,7 +268,7 @@ export default
   'company name ': 'Trilia',
   'car_make': 'Mitsubishi',
   'car_year': 2002,
-  'year_born': '2002. 1996'
+  'year_born': '1996'
 }, {
   'id': 28,
   'first_name': 'Manda',
@@ -288,7 +288,7 @@ export default
   'company name ': 'Twimm',
   'car_make': 'Pontiac',
   'car_year': 1985,
-  'year_born': '2002. 1996'
+  'year_born': '1996'
 }, {
   'id': 30,
   'first_name': 'Tawnya',
@@ -468,7 +468,7 @@ export default
   'company name ': 'Wordpedia',
   'car_make': 'Mercedes-Benz',
   'car_year': 2008,
-  'year_born': '2002. 1996'
+  'year_born': '1996'
 }, {
   'id': 48,
   'first_name': 'Emyle',
