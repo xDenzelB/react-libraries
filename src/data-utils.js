@@ -53,3 +53,25 @@ export function totalOfCarMake(arr) {
   });
   return mapObject;
 }
+
+export function peoplePerCarYear(arr) {
+  arr.filter(vehicle => vehicle.id === 'id');
+  const hashMap = arr.reduce((accumulator, person) => {
+    if (accumulator[person.car_year]) {
+      accumulator[person.car_year]++;
+    } else {
+      accumulator[person.car_year] = 1;
+    }
+    return accumulator;
+    
+  }, {});
+  const refactorObject = Object.entries(hashMap);
+  const mapObject = refactorObject.map(object => {
+    const carObj = {
+      x: object[0],
+      y: object[1]
+    };
+    return carObj;
+  });
+  return mapObject;
+}
