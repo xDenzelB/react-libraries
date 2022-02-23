@@ -5,7 +5,7 @@ import { generateColumns, totalOfEachGender, totalOfCarMake, peoplePerCarYear } 
 import { VictoryChart, VictoryBar, VictoryTheme, VictoryPie, VictoryLine, VictoryClipContainer } from 'victory';
 
 function App() {
-  console.log(peoplePerCarYear(Data));
+  console.log(totalOfEachGender(Data));
   return (
     <div className="App">
       <DataGrid
