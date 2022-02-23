@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import DataGrid from 'react-data-grid';
 import './App.css';
+import Data from './data';
+import { generateColumns, totalOfEachGender, totalOfCarMake, peoplePerCarYear } from './data-utils';
+import { VictoryChart, VictoryBar, VictoryTheme, VictoryPie, VictoryLine, VictoryClipContainer } from 'victory';
 
 function App() {
+  console.log(totalOfEachGender(Data));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DataGrid
+        columns={generateColumns(Data)} 
+        rows={Data} 
+      />
+
+      <VictoryChart
+        theme={VictoryTheme.material}
+      >
+        <VictoryBar
+          style={{ data: { fill: '#c43a31' } }}
+          alignment="start"
+          data={totalOfEachGender(Data)} x='x' y='y'
+        />
+      </VictoryChart>
+      <VictoryPie
+        colorScale={['tomato', 'orange', 'gold', 'cyan', 'navy']}
+        data={totalOfCarMake(Data)}
+      />
+      <VictoryChart>
+        <VictoryLine
+          groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
+          style={{ data: { stroke: '#c43a31', strokeWidth: 15, strokeLinecap: 'round' } }}
+          data={peoplePerCarYear(Data)} x='x' y='y'
+        />
+      </VictoryChart>
     </div>
   );
 }

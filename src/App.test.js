@@ -1,8 +1,26 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+// import { render, screen } from '@testing-library/react';
+// import App from './App';
+import { totalOfEachGender } from './data-utils';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('totalOfEachGender should create ', () => {
+  const expected = [
+    { x: 'Male', y: 2 },
+    { x: 'Female', y: 1 },
+    { x: 'Genderfluid', y: 2 },
+    { x: 'Bigender', y: 2 },
+    { x: 'Non-binary', y: 1 },
+  ];
+  
+  const actual = totalOfEachGender([
+    { gender: 'Male' },
+    { gender: 'Male' },
+    { gender: 'Female' },
+    { gender: 'Genderfluid' },
+    { gender: 'Bigender' },
+    { gender: 'Bigender' },
+    { gender: 'Genderfluid' },
+    { gender: 'Non-binary' },
+  ]);
+  
+  expect(actual).toEqual(expected);
 });
